@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+import React from "react"
+import { BrowserRouter, Switch, Route, Redirect, useRouteMatch} from "react-router-dom";
+
+//pages
+import PageNotFound from "./Pages/404/PageNotFound";
+import Home from "./Pages/Home/Home";
+const App = () => {
+
+  //get id on route
+  //const userMatch = useRouteMatch('/users/:id');
+  //const userId = userMatch ? userMatch.params.id : null
+return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route component={PageNotFound}/>
+      </Switch>
+    </BrowserRouter>
   );
-}
 
+}
 export default App;
