@@ -2,11 +2,11 @@ import axios from 'axios'
 
 // Crud functions for users
 
-    const url = "https://ti-react-test.herokuapp.com/users";
+    const url = 'https://ti-react-test.herokuapp.com/users'
 // get users
 const getUsers = () => {
     const request = axios.get(url)
-    return request.then(response =>  response.data);
+    return request.then(response =>  response.data)
 }
 
 // get single user
@@ -22,4 +22,4 @@ const updateUser =  async (user, id) => {
 
     return response.data
 }
-export default{ getUsers, getUser, updateUser}
+export default{ getUsers, getUser, updateUser }
