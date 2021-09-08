@@ -17,4 +17,9 @@ const getUser = async id => {
     return response.data
 }
 
-export default{ getUsers, getUser}
+const updateUser =  async (user, id) => {
+    const response = await axios.patch(`${url}/${id}`,user)
+
+    return response.data
+}
+export default{ getUsers, getUser, updateUser}
