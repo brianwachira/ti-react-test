@@ -7,6 +7,8 @@ import PageNotFound from './Pages/404/PageNotFound'
 import Home from './Pages/Home/Home'
 import User from './Components/User/User'
 import { initializeUsers } from './State/usersReducer'
+import Notification from './Components/Notification/Notification'
+import Layout from './Page-Components/Layout/Layout'
 
 const App = () => {
 
@@ -19,9 +21,12 @@ const App = () => {
 
   return (
     <BrowserRouter>
+      <Notification/>
       <Switch>
         <Route path='/user/:id'>
-          <User/>
+          <Layout>
+            <User/>
+          </Layout>
         </Route>
         <Route  path='/'>
           <Home />
