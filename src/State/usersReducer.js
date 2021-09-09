@@ -5,10 +5,17 @@ const initialUser = {
     bio: '',
     occupation: ''
 }
+const initialNotification = {
+    type : '',
+    title: '',
+    message: ''
+}
 const initialState = {
     user: initialUser,
-    users: []
+    users: [],
+    notification: initialNotification
 }
+
 export const usersReducer = ( state = initialState,action) => {
     switch(action.type) {
         case 'INIT_USERS':
@@ -27,6 +34,11 @@ export const usersReducer = ( state = initialState,action) => {
                 user: action.data,
                 users: state.users.map(user => user.id === action.data.id ? action.data : user )
             }
+        case 'SET_NOTIFICATION':
+                return {
+                    ...state,
+                    notification: action.data
+                }
         default:
             return state
     }
@@ -61,6 +73,15 @@ export const updateUser = (user,id) => {
         dispatch({
             type: 'UPDATE_USER',
             data: updatedUser
+        })
+    }
+}
+
+export const setNotification = notification => {
+    return dispatch => {
+        dispatch({
+            type: 'SET_NOTIFICATION',
+            data: notification
         })
     }
 }
