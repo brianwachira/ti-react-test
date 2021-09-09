@@ -63,11 +63,12 @@ a{
         display: flex;
         justify-content: center;
     }
-    &:hover{
-            transform: scale(1.1);
-            transform-origin: 50% 50%;
-            transition: all 0.3s ease-out;
-        }
+    //let me comment this because it is buggy
+    // &:hover{
+    //         transform: scale(1.1);
+    //         transform-origin: 50% 50%;
+    //         transition: all 0.3s ease-out;
+    // }
     @media screen and(max-width:768px) {
       padding-left: 0px;
       figure{
