@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 const Notification = ({ title, message }) => {
 
+    // notification component
     const { notification } = useSelector(state => state)
     if(!title || !message) {
         return null
