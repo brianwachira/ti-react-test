@@ -16,7 +16,7 @@ const getUser = async id => {
 
     return response.data
 }
-
+// update user
 const updateUser =  async (user, id) => {
     const response = await axios.patch(`${url}/${id}`,user)
 
