@@ -20,7 +20,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path='/user'>
+        <Route path='/user/:id'>
           <User/>
         </Route>
         <Route  path='/'>
