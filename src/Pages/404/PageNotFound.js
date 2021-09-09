@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom"
+/* eslint-disable react/react-in-jsx-scope */
+import { Link } from 'react-router-dom'
 import pageNotFound from '../../Assets/Images/404.svg'
 
 // Custom 404 page
@@ -14,4 +15,4 @@ const PageNotFound = () => {
     )
 }
 
-export default PageNotFound;
+export default PageNotFound

@@ -1,33 +1,42 @@
-import React, { useEffect} from "react"
-import { useDispatch } from "react-redux";
-import { BrowserRouter, Switch, Route, Redirect, useRouteMatch} from "react-router-dom";
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 //pages
-import PageNotFound from "./Pages/404/PageNotFound";
-import Home from "./Pages/Home/Home";
-import { initializeUsers } from "./State/usersReducer";
+import PageNotFound from './Pages/404/PageNotFound'
+import Home from './Pages/Home/Home'
+import User from './Components/User/User'
+import { initializeUsers } from './State/usersReducer'
+import Notification from './Components/Notification/Notification'
+import Layout from './Page-Components/Layout/Layout'
+
 const App = () => {
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
-  useEffect(()=> {
-    //
+  useEffect(() => {
+    // initialize users
     dispatch(initializeUsers())
-  },[dispatch])
+  }, [dispatch])
 
-  //get id on route
-  //const userMatch = useRouteMatch('/users/:id');
-  //const userId = userMatch ? userMatch.params.id : null
-return (
+  return (
     <BrowserRouter>
+      <Notification/>
       <Switch>
-        <Route exact path="/">
-          <Home/>
+        <Route path='/user/:id'>
+          <Layout>
+            <User/>
+          </Layout>
         </Route>
-        <Route component={PageNotFound}/>
+        <Route  path='/'>
+          <Layout>
+            <Home />
+          </Layout>
+        </Route>
+        <Route component={PageNotFound} />
       </Switch>
     </BrowserRouter>
-  );
+  )
 
 }
-export default App;
+export default App
