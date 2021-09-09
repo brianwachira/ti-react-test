@@ -7,7 +7,7 @@ const RegisterModal = (props) => {
     const bypassSubmit = (event) => {
         event.preventDefault()
         handleSubmit()
-
+        alert('user details updated succesfully')
         setTimeout(() => {
 
             //Simulate a click
