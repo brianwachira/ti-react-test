@@ -56,7 +56,7 @@ src
 ```
 
 ## Live Demo
-[link](https://justasec/)<br/>
+[link](https://ti-react-test.netlify.app)<br/>
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
