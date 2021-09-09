@@ -29,7 +29,9 @@ const App = () => {
           </Layout>
         </Route>
         <Route  path='/'>
-          <Home />
+          <Layout>
+            <Home />
+          </Layout>
         </Route>
         <Route component={PageNotFound} />
       </Switch>
