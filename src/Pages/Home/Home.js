@@ -15,7 +15,7 @@ const Home = () => {
                     <div className="row">
                         {users.map(user =>
                             <div
-                                className="col-md-4 mb-2"
+                                className="col-md-6 col-lg-4 mb-2"
                                 key={user.id}>
                                 <div className="profile-card card">
                                     <div className="d-flex flex-column flex-md-row">

@@ -64,11 +64,13 @@ const User = () => {
                                 <i className="fa fa-user text-center fa-3x text-light" aria-hidden="true"></i>
                             </figure>
                         </div>
-                        <div className="flex-grow-1 ms-md-3 mx-auto">
-                            <h3><i className="fa fa-user text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.name}</h3>
-                            <p className={'me-4'}><i className="fa fa-id-card text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.bio}</p>
-                            <p><i className="fa fa-envelope text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.email}</p>
-                            <p><i className="fa fa-handshake-o text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.occupation}</p>
+                        <div className="flex-grow-1 ms-md-3 ">
+                            <div className='d-grid justify-content-center justify-content-lg-start'>
+                                <h3><i className="fa fa-user text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.name}</h3>
+                                <p className={'me-4'}><i className="fa fa-id-card text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.bio}</p>
+                                <p><i className="fa fa-envelope text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.email}</p>
+                                <p><i className="fa fa-handshake-o text-primary me-2 d-none d-md-inline-flex" aria-hidden="true"></i>{user.occupation}</p>
+                            </div>
                             <RegisterModal
                                 label={'Edit User Details'}
                                 name={name}
