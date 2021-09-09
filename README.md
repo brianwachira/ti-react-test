@@ -1,6 +1,6 @@
 # React Test
 
-> This is an assessment to test the fundamentals of react, which include
+> This is an assessment to test the fundamentals of react, which include but are not limited to :
 - State
 - Store
 - Reducers
@@ -68,13 +68,13 @@ To get a local copy up and running follow these simple example steps.
 
 ### Install
 
-- Navigate to the frontend folder ```cd frontend```
+- Navigate to the ti-react-test folder ```cd ti-react-test```
 - Run ```npm install``` . This will install all the
 dependencies needed for the project
 ### Usage
-- Navigate to the frontend folder ```cd frontend```
+- Navigate to the ti-react-test folder ```cd ti-react-test```
 - Run ```npm start``` . This will initialize the
-frontend
+web app
 
 ### Known bugs
  - Notification Component is not working
