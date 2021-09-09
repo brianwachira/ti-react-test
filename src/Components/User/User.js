@@ -56,6 +56,7 @@ const User = () => {
     }
     return (
         <>
+            <h2 className={'text-primary text-center mt-4 mb-0'}>User Detail</h2>
             <div className="container d-flex justify-content-center">
                 <div className="profile-card card">
                     <div className="d-flex flex-column flex-md-row">

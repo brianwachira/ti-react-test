@@ -12,6 +12,7 @@ const Home = () => {
         <>
             <section>
                 <main className="container">
+                    <h2 className={'text-primary text-center mt-4 mb-0'}>Users</h2>
                     <div className="row">
                         {users.map(user =>
                             <div
