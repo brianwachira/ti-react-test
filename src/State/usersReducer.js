@@ -13,6 +13,7 @@ const initialNotification = {
 const initialState = {
     user: initialUser,
     users: [],
+    filteredUsers: [],
     notification: initialNotification
 }
 
@@ -34,6 +35,11 @@ export const usersReducer = ( state = initialState,action) => {
                 user: action.data,
                 users: state.users.map(user => user.id === action.data.id ? action.data : user )
             }
+        case 'FILTER_USERS':
+            return{
+                ...state,
+                filteredUsers: state.users.filter(user => user.name.toLowerCase().includes(action.data.toLowerCase()))
+        }
         case 'SET_NOTIFICATION':
                 return {
                     ...state,
@@ -73,6 +79,15 @@ export const updateUser = (user,id) => {
         dispatch({
             type: 'UPDATE_USER',
             data: updatedUser
+        })
+    }
+}
+
+export const filterUsers = ( name ) => {
+    return dispatch => {
+        dispatch({
+            type: 'FILTER_USERS',
+            data: name
         })
     }
 }
