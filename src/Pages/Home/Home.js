@@ -9,10 +9,11 @@ import { filterUsers } from '../../State/usersReducer'
 
 const Home = () => {
 
-    // fetch users from state
+    // fetch users and filtered users from state
     const { users, filteredUsers } = useSelector(state => state)
 
     const dispatch = useDispatch()
+    // search value to track search text from searchbox component
     const [searchValue, setSearchValue] = useState('')
 
     useEffect(() => {
